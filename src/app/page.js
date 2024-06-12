@@ -42,7 +42,7 @@ const page = () => {
   return (
     <div>
       {/* search Nav */}
-      <div className='w-full px-3 mb-2 justify-between flex'>
+      <div className='w-full px-3 pt-3 mb-2 justify-between flex'>
       <IoIosHeart onClick={()=>{router.push('/wishlist')}}  size={30} color='black'/>
       <input
         type="text"
