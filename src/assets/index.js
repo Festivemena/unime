@@ -11,7 +11,7 @@ import Ten from "../assets/6.png";
 import Eleven from "../assets/7.png";
 import Twelve from "../assets/8.png";
 import Thirteen from "../assets/9.png";
-import Fourteen from "../assets/10.PNG";
+import Fourteen from "../assets/10.png";
 import Chair from "../assets/a.png";
 import TV from "../assets/b.png";
 import Iphone from "../assets/c.png";
