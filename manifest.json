@@ -1,0 +1,12 @@
+{
+    "name" : "Swiftmart",
+    "short_name" : "Swiffy",
+    "version" : "1.0.0",
+    "display" : "standalone",
+    "orientation" : "portrait",
+    "background_color" : "#ffffff",
+    "theme_color" : "#FEC222",
+    "start_url" : "/",
+    "scope" : "/",
+    "langs" : ["en", "es"] 
+}
