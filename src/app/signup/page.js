@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import { IoArrowBack } from "react-icons/io5";
 import { useRouter } from 'next/navigation'
+import axios from 'axios';
 import Image from 'next/image'
 import {One, Two, Three, Four} from '../../assets'
 // import Dropdown from '../../components/dropdown'
@@ -22,26 +23,29 @@ const page = () => {
     }
 
     try {
-      const response = await fetch('https://swif-server.onrender.com/api/auth/register', {
-        method: 'POST',
+      const response = await axios.post('https://swif-server.onrender.com/api/users/register', {
+        email,
+        password,
+      }, {
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*', // Allow all origins, adjust as necessary for production
         },
-        body: JSON.stringify({ email, password }),
       });
 
-      if (response.ok) {
+      if (response.status === 201) {
         alert('Sign up successful');
+        localStorage.setItem('token', response.data.token);
         router.push('/editprofile');
       } else {
-        const data = await response.json();
-        alert(`Sign up failed: ${data.message}`);
+        alert('Sign up failed');
       }
     } catch (error) {
       console.error('Error:', error);
       alert('Sign up failed');
     }
   };
+
 
   return (
     <div className='w-full h-full'>

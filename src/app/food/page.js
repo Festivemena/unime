@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { Product } from '@/assets'
+import { BC } from '@/assets'
 import { IoArrowBack } from 'react-icons/io5'
 import { IoStarSharp } from "react-icons/io5";
 import { FiHeart } from "react-icons/fi";
@@ -37,7 +37,7 @@ const page = () => {
         <IoArrowBack onClick={()=>{router.back()}} color='white' className='mt-4 ml-3' size={30} />
         <FiHeart color='white' className='mt-4 mr-3' size={30} />
         </div>
-        <Image className='w-full -mt-12' src={Product} alt='Product' />
+        <Image className='w-full -mt-12' src={BC} alt='Product' />
         <div className='w-full h-full mx-3'>
             <div className='text-lg mt-2 font-bold'>Embroidered Polo Shirt Men's High-End</div>
             <div className='flex mt-1 text-sm'>4.3<IoStarSharp className='pt-1' color='#FEC222' /><div className='pl-[2px]'>Seller</div></div>
@@ -54,9 +54,9 @@ const page = () => {
         {/* CTA footer */}
       <div className='w-full  h-[100px] sticky bottom-0 bg-white '>
       <div className='bg-white justify-between flex rounded-2xl w-[90%] ml-[5%] h-[70%]'>
-        <div className=' flex justify-between ml-[5%] mt-3 w-[90%]'>
-                    <div className='text-sm text-white bg-[#FEC222] rounded-md h-6 text-wrap px-2 pb-[2px]'>Call Seller</div>
-                    <div className='text-sm text-[#FEC222] border-[#FEC222] h-6 text-wrap px-2 pb-[2px] border-2 rounded-md'>Message on Whatsapp</div>
+        <div className=' flex justify-between  mt-5 w-full'>
+                    <div className='text-md text-white bg-[#FEC222] rounded-md h-8 pt-1 text-wrap px-4 pb-[2px]'>Call Seller</div>
+                    <div className='text-md text-[#FEC222] border-[#FEC222] h-8 pt-1 text-wrap px-4 pb-[2px] border-2 rounded-md'>Message on Whatsapp</div>
       </div>
       </div>
       </div>
