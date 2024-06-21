@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { items } from '../../../../dev/services';
+import { items } from './../../../../dev/services';
 import Image from 'next/image';
 
 import { IoArrowBack } from 'react-icons/io5';

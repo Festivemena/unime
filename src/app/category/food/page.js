@@ -8,7 +8,7 @@ import { MdStore, MdHomeFilled } from "react-icons/md";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { IoArrowBack } from 'react-icons/io5';
 import { IoStarSharp } from 'react-icons/io5';
-import { foodStore } from '../../../../dev/services'
+import { foodStore } from './../../../../dev/services'
 import { useRouter } from 'next/navigation'
 
 const page = () => {
