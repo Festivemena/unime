@@ -40,6 +40,7 @@ const Page = () => {
       );
 
       console.log("Success:", response.data);
+      router.push('/profile')
     } catch (error) {
       console.error("Error:", error);
       alert("Login failed");
