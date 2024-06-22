@@ -77,7 +77,7 @@ const Page = () => {
           <MdHelpOutline color="black" size={26} />
           <div className="text-black pl-4 text-[16px] font-semibold">Help Center</div>
         </div>
-        <div className="bg-white flex px-4 mt-4 py-4 rounded-lg mx-4">
+        <div onClick={() => local storage.removeItem('token')} className="bg-white flex px-4 mt-4 py-4 rounded-lg mx-4">
           <IoIosLogOut color="black" size={26} />
           <div className="text-black pl-4 text-[16px] font-semibold">Log Out</div>
         </div>
