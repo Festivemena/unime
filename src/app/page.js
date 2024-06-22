@@ -62,8 +62,8 @@ const page = () => {
                 <div className='pl-2'>{item.seller}</div>
               </div>
               <div className='font-semibold flex w-full text-lg'>
-                <div className='text-xl '>{item.price}</div>
-                <div className='text-sm mt-[3px] ml-3 text-[#FEC222] font-medium'>{item.status}</div>
+                <div className='text-md '>{item.price}</div>
+                <div className='text-sm mt-[8px] ml-3 text-[#FEC222] font-medium'>{item.status}</div>
               </div>
             </div>
           ))}
@@ -147,7 +147,7 @@ const page = () => {
       <div className='h-[50px] w-[50px] rounded-full bg-white text-center items-center justify-center'>
       <MdHomeFilled color='#FEC222' className='ml-[5px] pt-[2px]' size={40} />
       </div>
-      <IoPersonCircleSharp onClick={() => router.push('/profile')} color='#686868' size={40} />
+      <IoPersonCircleSharp onClick={() => router.push('/signin')} color='#686868' size={40} />
       </div>
       </div>
       </div>
