@@ -38,9 +38,11 @@ const Page = () => {
           },
         }
       );
-
+      localStorage.setItem('token', response.data.access_token);
       console.log("Success:", response.data);
-      router.push('/profile')
+      const token = localStorage.getItem('token');
+      console.log(token);
+      // router.push('/profile')
     } catch (error) {
       console.error("Error:", error);
       alert("Login failed");

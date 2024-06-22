@@ -15,6 +15,38 @@ import { items } from '../../dev/helpers';
 
 const page = () => {
   const router = useRouter();
+  const [user, setUser] = useState();
+  const [token, setToken] = useState();
+
+  useEffect(() => {
+    const tken = localStorage.getItem('token');
+    setToken(tken);
+  })
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       // Retrieve the token from localStorage
+  //       const token = localStorage.getItem('token');
+  //       console.log(token);
+
+  //       // Perform the GET request with the Bearer token
+  //       const response = await axios.get('https://api.vplaza.com.ng/users/getuser', {
+  //         headers: {
+  //           'Authorization': `Bearer ${token}`
+  //         }
+  //       });
+
+  //       // Handle the response data
+  //       setUser(response.data);
+  //       console.log(user);
+  //     } catch (error) {
+  //       // Handle any errors
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []); // Empty dependency array means this useEffect runs once after the initial render
   
   // const [items, setItems] = useState([]);
 
@@ -147,7 +179,12 @@ const page = () => {
       <div className='h-[50px] w-[50px] rounded-full bg-white text-center items-center justify-center'>
       <MdHomeFilled color='#FEC222' className='ml-[5px] pt-[2px]' size={40} />
       </div>
+      {token ? 
+      <IoPersonCircleSharp onClick={() => router.push('/profile')} color='#686868' size={40} />
+      :
       <IoPersonCircleSharp onClick={() => router.push('/signin')} color='#686868' size={40} />
+    }
+      
       </div>
       </div>
       </div>
