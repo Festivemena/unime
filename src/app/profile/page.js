@@ -47,6 +47,12 @@ const Page = () => {
     fetchData();
   }, []); // Empty dependency array means this useEffect runs once after the initial render
 
+
+const LogOut = () => {
+local storage.removeItem('token');
+router.push('/signin');
+}
+
   return (
     <div className="w-full bg-gray-200 h-screen">
       <div className="bg-[#FEC222] rounded-br-[50px] rounded-bl-[50px] pt-4 w-full h-[35%]">
@@ -77,7 +83,7 @@ const Page = () => {
           <MdHelpOutline color="black" size={26} />
           <div className="text-black pl-4 text-[16px] font-semibold">Help Center</div>
         </div>
-        <div onClick={() => local storage.removeItem('token')} className="bg-white flex px-4 mt-4 py-4 rounded-lg mx-4">
+        <div onClick={LogOut} className="bg-white flex px-4 mt-4 py-4 rounded-lg mx-4">
           <IoIosLogOut color="black" size={26} />
           <div className="text-black pl-4 text-[16px] font-semibold">Log Out</div>
         </div>
